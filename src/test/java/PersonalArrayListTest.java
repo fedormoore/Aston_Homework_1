@@ -31,6 +31,17 @@ public class PersonalArrayListTest {
     }
 
     @Test
+    void checkSetShouldReturn3() {
+        list.add(five);
+        list.add(seven);
+        list.add(two);
+        list.set(1, five);
+
+        Assertions.assertEquals(list.get(1), five);
+        Assertions.assertEquals(list.size(), 3);
+    }
+
+    @Test
     void checkAddByIndexShouldReturn7() {
         list.add(five);
         list.add(two);
